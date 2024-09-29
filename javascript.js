@@ -1,10 +1,12 @@
 const div = document.querySelector(".grid")
 const btnCont = document.querySelector(".btnContainer")
+let newGen = document.querySelector(".newGen")
+
 
 for(let i=0;i<(16*16);i++){
     let box = document.createElement("div")
     box.setAttribute("class", "box")
-    div.insertBefore(box, btnCont)
+    div.appendChild(box)
 }
 
 let boxed = document.querySelectorAll(".box")
@@ -17,4 +19,8 @@ let boxed = document.querySelectorAll(".box")
         box.addEventListener("mouseleave", () => {
             box.style.backgroundColor = "black"
         })
+
     })
+
+    
+    

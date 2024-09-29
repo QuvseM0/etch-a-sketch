@@ -9,20 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #edf5f8;
-}
-
-.logo{
-    font-size: 20px;
-    color: #18181f28;
-}
-
-.btnContainer{
-    display: flex;
-    width: 1344px;
-    height: 20px;
-    justify-content: space-between;
-    align-items: flex-start;
+    background-color: #bedce7;
 }
 
 button{
@@ -33,15 +20,21 @@ button{
     border-radius: 50%;
 }
 
-.title{
-    margin: 20px;
-    font-weight: 940;
+.container{
+    background-color: rgb(110, 162, 214);
+    padding: 10px 10px 10px 10px;
+    border-radius: 1%;
+
+}
+
+.logo{
+    font-size: 20px;
+    color: #18181f28;
 }
 
 .grid{
-    height:70vh;
-    width: 140vh;
-    padding: 15px 0px;
+    height:85vh;
+    width: 85vh;
     background-color: rgb(110, 162, 214);
     display: flex;
     flex-wrap: wrap;
@@ -51,9 +44,20 @@ button{
 }
 
 .box{
-    padding: 20px;
-    margin: 1px;
-    border: 1px;
+    width: 6.25%;
+    height: 6.25%;
+    box-sizing: border-box;
     background-color: white;
 
 }
+
+.btnContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.title{
+    margin: 20px;
+    font-weight: 940;
+}
+
