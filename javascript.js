@@ -2,35 +2,6 @@ const grid = document.querySelector(".grid")
 const btnCont = document.querySelector(".btnContainer")
 const gridGen = document.querySelector("#gridGen")
 const newGen = document.querySelector("#newGen")
-const color = document.querySelector("#color")
-
-
-
-function boxPainter(){
-    const boxed = document.querySelectorAll(".box")
-
-    boxed.forEach((box) => {
-        box.style.opacity = 0.1
-        box.addEventListener("mouseenter", () => {
-            box.style.backgroundColor = "gray"
-        })
-        box.addEventListener("mouseleave", () => {
-            
-            //REMOVE THESE LINES TO MAKE THE BOX COLOR RANDOM
-            /*let red = 60 +parseInt(Math.random()*100)
-            let blue = 70 +parseInt(Math.random()*100)
-            let green = 50 +parseInt(Math.random()*100)
-            let randomColor = "rgba("+red+","+blue+","+green+")"
-            box.style.backgroundColor = randomColor*/
-
-
-            box.style.backgroundColor = "black"
-            box.style.opacity = (parseFloat(box.style.opacity||1)+0.1)
-
-        })
-
-    })
-}
 
 function removeGrid(){
     while (grid.firstChild) {
@@ -43,9 +14,16 @@ function createGrid(){
         let box = document.createElement("div")
         box.setAttribute("class", "box")
         grid.appendChild(box)
+        const boxed = document.querySelectorAll(".box")
+        boxed.forEach((box) => {
+            box.addEventListener("mouseenter", () => {
+                box.style.backgroundColor = "gray"
+            })
+            box.addEventListener("mouseleave", () => {
+                box.style.backgroundColor = "black"
+            })
+        })
     }
-    boxPainter()
-
 }
 
 function createCustomGrid(input){
@@ -61,7 +39,15 @@ function createCustomGrid(input){
             box.style.cssText = boxSize
             grid.appendChild(box)
         }
-    boxPainter()
+    const boxed = document.querySelectorAll(".box")
+    boxed.forEach((box) => {
+        box.addEventListener("mouseenter", () => {
+            box.style.backgroundColor = "gray"
+        })
+        box.addEventListener("mouseleave", () => {
+            box.style.backgroundColor = "black"
+        })
+    })
 }
 
 function generateCustomGrid(){
